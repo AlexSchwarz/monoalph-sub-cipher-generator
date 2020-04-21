@@ -15,6 +15,7 @@ public class CipherGenerator {
         initKeyWord(keyWord);
         initMessage(message);
         generateCipherMapping(generateCipherAlphArray());
+        generateCipherMessage();
     }
 
     private void initKeyWord(String keyWord) {
@@ -70,7 +71,18 @@ public class CipherGenerator {
     }
 
     private void generateCipherMessage() {
+        System.out.println("Generate cipher message...");
+        char[] messageArray = message.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char character : messageArray) {
+            sb.append(cipherMapping.getOrDefault(character, character));
+        }
+        cipherMessage = sb.toString();
+        System.out.print("-> Cipher message: ");
+    }
 
+    public String getCipherMessage() {
+        return cipherMessage;
     }
 
     private void printList(List list) {

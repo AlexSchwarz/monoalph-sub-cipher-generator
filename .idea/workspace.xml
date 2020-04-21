@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a88f368-3043-4cc0-8016-5c09168d6d2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/resources/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" afterDir="false" />
@@ -15,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -78,25 +80,25 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="423" y="59" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587457581373" />
-    <state width="1877" height="163" key="GridCell.Tab.0.bottom" timestamp="1587478485689">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="750" height="276" key="GridCell.Tab.0.bottom" timestamp="1587505500352">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="174" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587457539461" />
+    <state width="750" height="276" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
     <state width="1877" height="163" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="1877" height="163" key="GridCell.Tab.0.center" timestamp="1587478485689">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="750" height="276" key="GridCell.Tab.0.center" timestamp="1587505500352">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="174" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587457539460" />
+    <state width="750" height="276" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
     <state width="1877" height="163" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="1877" height="163" key="GridCell.Tab.0.left" timestamp="1587478485689">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="750" height="276" key="GridCell.Tab.0.left" timestamp="1587505500352">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="174" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587457539460" />
+    <state width="750" height="276" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
     <state width="1877" height="163" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="1877" height="163" key="GridCell.Tab.0.right" timestamp="1587478485689">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="750" height="276" key="GridCell.Tab.0.right" timestamp="1587505500352">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="174" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587457539461" />
+    <state width="750" height="276" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
     <state width="1877" height="163" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587492237469">
       <screen x="0" y="0" width="1920" height="1040" />
