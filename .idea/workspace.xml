@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a88f368-3043-4cc0-8016-5c09168d6d2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/MainWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/MainWindow.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,10 +39,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/monoalph_sub_cipher_generator" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexanderPatrick\IdeaProjects\monoalph-sub-cipher-generator\src\monoalph_sub_cipher_generator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexanderPatrick\IdeaProjects\monoalph-sub-cipher-generator\src\monoalph_sub_cipher_generator" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="monoalph_sub_cipher_generator.App" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="monoalph_sub_cipher_generator.Main" />
       <module name="monoalph-sub-cipher-generator" />
       <extension name="coverage">
         <pattern>
@@ -54,7 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -72,38 +83,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587508932310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587508932310" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1587476424339">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587476424339" />
+    <state x="689" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587508835721">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587508835721" />
     <state x="423" y="59" key="CommitChangelistDialog2" timestamp="1587457581373">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="423" y="59" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587457581373" />
-    <state width="750" height="276" key="GridCell.Tab.0.bottom" timestamp="1587505500352">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="750" height="276" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="163" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="750" height="276" key="GridCell.Tab.0.center" timestamp="1587505500352">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="750" height="276" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="163" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="750" height="276" key="GridCell.Tab.0.left" timestamp="1587505500352">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="750" height="276" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="163" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state width="750" height="276" key="GridCell.Tab.0.right" timestamp="1587505500352">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="750" height="276" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="163" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587478485689" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587492237469">
+    <state width="1877" height="163" key="GridCell.Tab.0.bottom" timestamp="1587509131671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587492237469" />
+    <state width="750" height="276" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1877" height="163" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587509131671" />
+    <state width="1877" height="163" key="GridCell.Tab.0.center" timestamp="1587509131671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="750" height="276" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1877" height="163" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587509131671" />
+    <state width="1877" height="163" key="GridCell.Tab.0.left" timestamp="1587509131671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="750" height="276" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1877" height="163" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587509131671" />
+    <state width="1877" height="163" key="GridCell.Tab.0.right" timestamp="1587509131671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="750" height="276" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1877" height="163" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587509131671" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587505713706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587505713706" />
     <state x="584" y="223" key="extract.method.dialog" timestamp="1587424116521">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

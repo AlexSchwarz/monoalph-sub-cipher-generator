@@ -2,13 +2,12 @@ package monoalph_sub_cipher_generator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class CipherGenerator {
     private String keyWord;
     private String message;
     private String cipherMessage;
-    private char[] standardAlphabet = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+    private final static char[] standardAlphabet = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     HashMap<Character, Character> cipherMapping = new HashMap<>();
 
     public CipherGenerator(String keyWord, String message) throws IllegalArgumentException {
@@ -83,11 +82,5 @@ public class CipherGenerator {
 
     public String getCipherMessage() {
         return cipherMessage;
-    }
-
-    private void printList(List list) {
-        for(Object element : list) {
-            System.out.println(element.toString());
-        }
     }
 }
