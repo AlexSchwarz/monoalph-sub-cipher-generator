@@ -20,8 +20,12 @@ public class App {
     }
 
     private void run() {
+        System.out.print("Key Word Input: ");
+        String inputKeyWord = userInterface.getInput();
+        System.out.print("Message Input: ");
+        String inputMessage = userInterface.getInput();
         try {
-            CipherGenerator cipherGenerator = new CipherGenerator(userInterface.getInput(), userInterface.getInput());
+            CipherGenerator cipherGenerator = new CipherGenerator(inputKeyWord, inputMessage);
         } catch (IllegalArgumentException e) {
             userInterface.displayError(e.getMessage());
         }
