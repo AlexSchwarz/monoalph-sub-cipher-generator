@@ -48,7 +48,7 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <TextArea fx:id="textAreaInputMessage" prefHeight="200.0" prefWidth="200.0">
+                  <TextArea fx:id="textAreaInputMessage" prefHeight="200.0" prefWidth="200.0" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
@@ -66,7 +66,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <TextArea fx:id="textAreaOutputMessage" editable="false" prefHeight="306.0" prefWidth="300.0">
+                  <TextArea fx:id="textAreaOutputMessage" editable="false" prefHeight="306.0" prefWidth="300.0" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
@@ -107,7 +107,7 @@
                         <Label contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" text="Info" textAlignment="CENTER" />
                      </children>
                   </HBox>
-                  <TextArea fx:id="textAreaInfo" editable="false" prefHeight="319.0" prefWidth="300.0">
+                  <TextArea fx:id="textAreaInfo" editable="false" prefHeight="319.0" prefWidth="300.0" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>

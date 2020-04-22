@@ -44,12 +44,14 @@ public class CipherGenerator {
     }
 
     private void initKeyWord(String keyWord) {
-        setInfoText("Validating key word...");
-        if(keyWord.isEmpty() || keyWord == null || keyWord.matches("")) {
+        setInfoText("Validating keyword...");
+        if(keyWord.matches("^[a-zA-Z]+$")) {
+            this.keyWord = keyWord.toUpperCase();
+            setInfoText("-> Keyword valid");
+        } else if(keyWord.isEmpty() || keyWord == null) {
             throw new IllegalArgumentException("Invalid Keyword: Empty or Null");
         } else {
-            this.keyWord = keyWord.toUpperCase();
-            setInfoText("-> Key word valid");
+            throw new IllegalArgumentException("Invalid Keyword: Illegal characters");
         }
     }
 
@@ -87,11 +89,11 @@ public class CipherGenerator {
     }
 
     private void generateCipherMapping(ArrayList<Character> cipherAlphArray) {
-        setInfoText("Generating map alphabet mapping...");
+        setInfoText("Generating alphabet mapping...");
         for(int i = 0; i < cipherAlphArray.size(); i++) {
             cipherMapping.put(standardAlphabet[i], cipherAlphArray.get(i));
         }
-        setInfoText("-> Generated cipher mapping: ");
+        //setInfoText("-> Generated cipher mapping: ");
         //System.out.println(cipherMapping);
     }
 
