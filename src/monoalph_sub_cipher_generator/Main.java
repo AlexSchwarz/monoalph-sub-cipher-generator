@@ -25,7 +25,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
             Pane rootPane = loader.load();
             Scene scene = new Scene(rootPane);
-            primaryStage.setMinWidth(350);
+            primaryStage.setMinWidth(500);
             primaryStage.setMinHeight(350);
             primaryStage.setScene(scene);
             primaryStage.show();

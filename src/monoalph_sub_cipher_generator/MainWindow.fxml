@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monoalph_sub_cipher_generator.MainWindowController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="213.0" minHeight="60.0" prefHeight="53.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="267.0" minHeight="150.0" prefHeight="149.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="312.0" minHeight="150.0" prefHeight="173.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <HBox fillHeight="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" text="Input Message">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="buttonInputMessageClear" mnemonicParsing="false" onAction="#clearTextAreaMessageInput" text="Clear">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="textAreaInputMessage" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <children>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label text="Output Message">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="textAreaOutputMessage" editable="false" prefHeight="306.0" prefWidth="300.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="100.0" text="Keyword">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="buttonKeyWordClear" mnemonicParsing="false" onAction="#clearTextFieldKeyWord" text="Clear">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="textFieldKeyWord">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="372.0" prefWidth="399.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <children>
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0">
+                     <children>
+                        <Label contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" text="Info" textAlignment="CENTER" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="textAreaInfo" editable="false" prefHeight="319.0" prefWidth="300.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="buttonGenerate" mnemonicParsing="false" onAction="#generate" text="Generate">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Clear all" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
