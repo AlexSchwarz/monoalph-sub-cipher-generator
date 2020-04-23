@@ -6,24 +6,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CipherGenerator {
-    private String keyWord;
-    private String message;
-    private String cipherMessage;
     private String infoText;
-    HashMap<Character, Character> cipherMapping = new HashMap<>();
-
     private final SimpleBooleanProperty infoEvent = new SimpleBooleanProperty(true);
     private final static char[] standardAlphabet = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
     public CipherGenerator() {
-
+        infoText = "No action performed";
     }
 
-    public void generate(String keyWord, String message) throws IllegalArgumentException {
-        initKeyWord(keyWord);
-        initMessage(message);
-        generateCipherMapping(generateCipherAlphArray());
-        generateCipherMessage();
+    public String generate(String keyWordInput, String messageInput) throws IllegalArgumentException {
+        validateKeyWord(keyWordInput);
+        String keyWord = keyWordInput.toUpperCase();
+        ValidateMessage(messageInput);
+        String message = messageInput.toUpperCase();
+        HashMap<Character, Character> cipherMapping = generateCipherMapping(generateCipherAlphArray(keyWord));
+        return generateCipherMessage(message, cipherMapping);
     }
 
     private void setInfoText(String text) {
@@ -43,10 +40,9 @@ public class CipherGenerator {
         return infoText;
     }
 
-    private void initKeyWord(String keyWord) {
+    private void validateKeyWord(String keyWord) {
         setInfoText("Validating keyword...");
         if(keyWord.matches("^[a-zA-Z]+$")) {
-            this.keyWord = keyWord.toUpperCase();
             setInfoText("-> Keyword valid");
         } else if(keyWord.isEmpty() || keyWord == null) {
             throw new IllegalArgumentException("Invalid Keyword: Empty or Null");
@@ -55,17 +51,16 @@ public class CipherGenerator {
         }
     }
 
-    private void initMessage(String message) {
+    private void ValidateMessage(String message) {
         setInfoText("Validating message...");
         if(message.isEmpty() || message == null) {
             throw new IllegalArgumentException("Invalid Message: Empty or Null");
         } else {
-            this.message = message.toUpperCase();
             setInfoText("-> Message valid");
         }
     }
 
-    private ArrayList<Character> generateCipherAlphArray() {
+    private ArrayList<Character> generateCipherAlphArray(String keyWord) {
         setInfoText("Generating cipher alphabet...");
         ArrayList<Character> cipherAlphArray = new ArrayList<>();
         for(char character : keyWord.toCharArray()) {
@@ -88,17 +83,20 @@ public class CipherGenerator {
         return listWithoutDuplicates;
     }
 
-    private void generateCipherMapping(ArrayList<Character> cipherAlphArray) {
+    private HashMap<Character, Character> generateCipherMapping(ArrayList<Character> cipherAlphArray) {
         setInfoText("Generating alphabet mapping...");
+        HashMap<Character, Character> cipherMapping = new HashMap<>();
         for(int i = 0; i < cipherAlphArray.size(); i++) {
             cipherMapping.put(standardAlphabet[i], cipherAlphArray.get(i));
         }
+        return cipherMapping;
         //setInfoText("-> Generated cipher mapping: ");
         //System.out.println(cipherMapping);
     }
 
-    private void generateCipherMessage() {
+    private String generateCipherMessage(String message, HashMap<Character, Character> cipherMapping) {
         setInfoText("Generate cipher message...");
+        String cipherMessage;
         char[] messageArray = message.toCharArray();
         StringBuilder sb = new StringBuilder();
         for(char character : messageArray) {
@@ -106,9 +104,6 @@ public class CipherGenerator {
         }
         cipherMessage = sb.toString();
         setInfoText("-> Cipher message generation successful");
-    }
-
-    public String getCipherMessage() {
         return cipherMessage;
     }
 }

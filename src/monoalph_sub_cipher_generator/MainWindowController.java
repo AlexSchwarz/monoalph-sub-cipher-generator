@@ -2,6 +2,7 @@ package monoalph_sub_cipher_generator;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -29,6 +30,18 @@ public class MainWindowController {
     }
 
     @FXML
+    public void clearAllText() {
+        textAreaOutputMessage.clear();
+        textAreaInputMessage.clear();
+        textAreaInfo.clear();
+        textFieldKeyWord.clear();
+    }
+
+    @FXML void displayAboutText() {
+        setTextAreaInfo("Place Holder");
+    }
+
+    @FXML
     public void generate() {
         textAreaInfo.clear();
         textAreaOutputMessage.clear();
@@ -40,8 +53,7 @@ public class MainWindowController {
         String inputMessage = textAreaInputMessage.getText();
 
         try {
-            cipherGenerator.generate(inputKeyWord, inputMessage);
-            textAreaOutputMessage.setText(cipherGenerator.getCipherMessage());
+            textAreaOutputMessage.setText(cipherGenerator.generate(inputKeyWord, inputMessage));
         } catch (IllegalArgumentException e) {
             setTextAreaInfo("-> " + e.getMessage());
         }

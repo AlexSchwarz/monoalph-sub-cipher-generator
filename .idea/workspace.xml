@@ -4,7 +4,6 @@
     <list default="true" id="6a88f368-3043-4cc0-8016-5c09168d6d2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/CipherGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monoalph_sub_cipher_generator/MainWindowController.java" afterDir="false" />
     </list>
@@ -93,13 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587594235542</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bug fix for illegal characters in keyword. Automatic new line in all text areas">
+      <created>1587596095001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587596095001</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add fxml init" />
     <MESSAGE value="Added fxml implementation, now fully funtional with small changes needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fxml implementation, now fully funtional with small changes needed" />
+    <MESSAGE value="Bug fix for illegal characters in keyword. Automatic new line in all text areas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix for illegal characters in keyword. Automatic new line in all text areas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587508932310">
@@ -114,31 +121,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587508835721" />
-    <state x="476" y="67" key="CommitChangelistDialog2" timestamp="1587594234815">
+    <state x="476" y="67" key="CommitChangelistDialog2" timestamp="1587596094394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="423" y="59" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587457581373" />
-    <state x="476" y="67" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587594234815" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1587596051572">
+    <state x="476" y="67" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587596094394" />
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom" timestamp="1587634891858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="750" height="276" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587596051572" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1587596051572">
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
+    <state width="1877" height="200" key="GridCell.Tab.0.center" timestamp="1587634891858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="750" height="276" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587596051572" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1587596051572">
+    <state width="1877" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
+    <state width="1877" height="200" key="GridCell.Tab.0.left" timestamp="1587634891858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="750" height="276" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587596051572" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1587596051572">
+    <state width="1877" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right" timestamp="1587634891858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="750" height="276" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587596051572" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587505713706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
