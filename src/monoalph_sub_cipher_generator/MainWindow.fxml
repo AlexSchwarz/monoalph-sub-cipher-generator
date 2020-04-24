@@ -14,21 +14,23 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monoalph_sub_cipher_generator.MainWindowController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monoalph_sub_cipher_generator.MainWindowController">
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane prefHeight="490.0" prefWidth="533.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.3333333333333" minWidth="10.0" prefWidth="323.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.3333740234375" minWidth="10.0" prefWidth="195.66664632161462" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="213.0" minHeight="60.0" prefHeight="53.0" vgrow="NEVER" />
-          <RowConstraints maxHeight="267.0" minHeight="150.0" prefHeight="149.0" vgrow="NEVER" />
-          <RowConstraints maxHeight="312.0" minHeight="150.0" prefHeight="173.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="213.0" minHeight="51.999996185302734" prefHeight="66.6666488647461" />
+            <RowConstraints maxHeight="213.0" minHeight="20.66666030883789" prefHeight="103.33332061767578" />
+          <RowConstraints maxHeight="267.0" minHeight="89.33334604899088" prefHeight="155.33331298828125" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="24.666666666666686" prefHeight="164.33335367838538" />
         </rowConstraints>
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+            <VBox prefHeight="155.0" prefWidth="306.0" GridPane.rowIndex="2">
                <children>
                   <HBox fillHeight="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
                      <children>
@@ -37,9 +39,14 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                            </HBox.margin>
                         </Label>
-                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="288.0">
                            <children>
-                              <Button fx:id="buttonInputMessageClear" mnemonicParsing="false" onAction="#clearTextAreaMessageInput" text="Clear">
+                              <Button fx:id="buttonGenerate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generateMessage" prefHeight="25.0" prefWidth="100.0" text="Generate">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="buttonInputMessageClear" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearTextAreaMessageInput" prefHeight="25.0" prefWidth="50.0" text="Clear">
                                  <HBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </HBox.margin>
@@ -48,14 +55,14 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <TextArea fx:id="textAreaInputMessage" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+                  <TextArea fx:id="textAreaInputMessage" prefHeight="243.0" prefWidth="296.0" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </VBox.margin>
                   </TextArea>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+            <VBox prefHeight="161.0" prefWidth="363.0" GridPane.rowIndex="3">
                <children>
                   <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
                      <children>
@@ -73,7 +80,7 @@
                   </TextArea>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="95.0" prefWidth="337.0">
                <children>
                   <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
                      <children>
@@ -82,9 +89,9 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                            </HBox.margin>
                         </Label>
-                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="293.0">
                            <children>
-                              <Button fx:id="buttonKeyWordClear" mnemonicParsing="false" onAction="#clearTextFieldKeyWord" text="Clear">
+                              <Button fx:id="buttonKeyWordClear" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearTextFieldKeyWord" prefHeight="25.0" prefWidth="50.0" text="Clear">
                                  <HBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </HBox.margin>
@@ -100,34 +107,46 @@
                   </TextField>
                </children>
             </VBox>
-            <VBox prefHeight="372.0" prefWidth="399.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="471.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <children>
-                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0">
+                  <VBox prefHeight="343.0" prefWidth="247.0">
                      <children>
-                        <Label contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" text="Info" textAlignment="CENTER" />
+                        <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0">
+                           <children>
+                              <Label contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" text="Info" textAlignment="CENTER" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="textAreaInfo" editable="false" prefHeight="302.0" prefWidth="236.0" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextArea>
                      </children>
-                  </HBox>
-                  <TextArea fx:id="textAreaInfo" editable="false" prefHeight="319.0" prefWidth="300.0" wrapText="true">
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="100.0" text="Cipher Alphabet">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                      </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="textAreaCipherAlphabet" editable="false" prefHeight="45.0" prefWidth="438.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Monospaced Regular" size="14.0" />
+                     </font>
                   </TextArea>
                </children>
             </VBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-               <children>
-                  <Button fx:id="buttonGenerate" mnemonicParsing="false" onAction="#generate" text="Generate">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
          </children>
       </GridPane>
    </center>
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="17.0" prefWidth="673.0" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Edit">
             <items>

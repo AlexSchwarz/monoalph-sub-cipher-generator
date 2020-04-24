@@ -38,6 +38,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/monoalph_sub_cipher_generator" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -126,26 +127,30 @@
     </state>
     <state x="423" y="59" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587457581373" />
     <state x="476" y="67" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587596094394" />
-    <state width="1877" height="200" key="GridCell.Tab.0.bottom" timestamp="1587634891858">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1663" height="169" key="GridCell.Tab.0.bottom" timestamp="1587765393948">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="750" height="276" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1663" height="169" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1587765393948" />
     <state width="1877" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
-    <state width="1877" height="200" key="GridCell.Tab.0.center" timestamp="1587634891858">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1663" height="169" key="GridCell.Tab.0.center" timestamp="1587765393948">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="750" height="276" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1663" height="169" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1587765393948" />
     <state width="1877" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
-    <state width="1877" height="200" key="GridCell.Tab.0.left" timestamp="1587634891858">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1663" height="169" key="GridCell.Tab.0.left" timestamp="1587765393948">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="750" height="276" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1663" height="169" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1587765393948" />
     <state width="1877" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
-    <state width="1877" height="200" key="GridCell.Tab.0.right" timestamp="1587634891858">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1663" height="169" key="GridCell.Tab.0.right" timestamp="1587765393948">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="750" height="276" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587505500352" />
+    <state width="1663" height="169" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1587765393948" />
     <state width="1877" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587634891858" />
+    <state x="357" y="106" key="SettingsEditor" timestamp="1587753958478">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="357" y="106" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1587753958478" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587505713706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -159,5 +164,9 @@
     </state>
     <state x="584" y="223" key="extract.method.dialog/0.0.1707.920@0.0.1707.920" timestamp="1587424116521" />
     <state x="657" y="252" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587593514552" />
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1587761426711">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1587761426711" />
   </component>
 </project>

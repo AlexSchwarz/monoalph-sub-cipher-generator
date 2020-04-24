@@ -1,6 +1,8 @@
 package monoalph_sub_cipher_generator;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
@@ -10,7 +12,28 @@ public class MainWindowController {
     @FXML TextArea textAreaInputMessage;
     @FXML TextArea textAreaOutputMessage;
     @FXML TextArea textAreaInfo;
+    @FXML TextArea textAreaCipherAlphabet;
     @FXML TextField textFieldKeyWord;
+    CipherGenerator cipherGenerator;
+
+    @FXML
+    public void initialize() {
+        cipherGenerator = new CipherGenerator();
+        textFieldKeyWord.textProperty().addListener((observable, oldValue, newValue) -> setCipherMapping(textFieldKeyWord.getText()));
+        cipherGenerator.getInfoEvent().addListener(event -> setTextAreaInfo(cipherGenerator.getInfoText()));
+    }
+
+    private void setCipherMapping(String keyWord) {
+        textAreaInfo.clear();
+        textAreaOutputMessage.clear();
+        try {
+            cipherGenerator.setCipherMapping(keyWord);
+            textAreaCipherAlphabet.setText(cipherGenerator.getCipherMappingToString());
+        } catch (IllegalArgumentException e){
+            setTextAreaInfo("-> " + e.getMessage());
+            textAreaCipherAlphabet.clear();
+        }
+    }
 
     @FXML
     public void close() { Platform.exit();}
@@ -23,6 +46,7 @@ public class MainWindowController {
     @FXML
     public void clearTextAreaMessageInput() {
         textAreaInputMessage.clear();
+        textAreaOutputMessage.clear();
     }
 
     public void setTextAreaInfo(String string) {
@@ -42,27 +66,15 @@ public class MainWindowController {
     }
 
     @FXML
-    public void generate() {
-        textAreaInfo.clear();
+    public void generateMessage() {
         textAreaOutputMessage.clear();
-
-        CipherGenerator cipherGenerator = new CipherGenerator();
-        setListener(cipherGenerator);
-
-        String inputKeyWord = textFieldKeyWord.getText();
         String inputMessage = textAreaInputMessage.getText();
-
         try {
-            textAreaOutputMessage.setText(cipherGenerator.generate(inputKeyWord, inputMessage));
+            textAreaOutputMessage.setText(cipherGenerator.generateMessage(inputMessage));
         } catch (IllegalArgumentException e) {
             setTextAreaInfo("-> " + e.getMessage());
+            textAreaCipherAlphabet.clear();
+            textAreaOutputMessage.clear();
         }
     }
-
-    private void setListener(CipherGenerator cipherGenerator) {
-        cipherGenerator.getInfoEvent().addListener(event -> setTextAreaInfo(cipherGenerator.getInfoText()));
-    }
-
-
-
 }

@@ -7,37 +7,19 @@ import java.util.HashMap;
 
 public class CipherGenerator {
     private String infoText;
+    HashMap<Character, Character> cipherMapping = new HashMap<>();
     private final SimpleBooleanProperty infoEvent = new SimpleBooleanProperty(true);
-    private final static char[] standardAlphabet = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+    private final static char[] standardAlphabetArray = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
     public CipherGenerator() {
         infoText = "No action performed";
     }
 
-    public String generate(String keyWordInput, String messageInput) throws IllegalArgumentException {
-        validateKeyWord(keyWordInput);
-        String keyWord = keyWordInput.toUpperCase();
-        ValidateMessage(messageInput);
-        String message = messageInput.toUpperCase();
-        HashMap<Character, Character> cipherMapping = generateCipherMapping(generateCipherAlphArray(keyWord));
-        return generateCipherMessage(message, cipherMapping);
-    }
-
-    private void setInfoText(String text) {
-        this.infoText = text;
-        triggerEvent(infoEvent);
-    }
-
-    private void triggerEvent(SimpleBooleanProperty booleanProperty) {
-        booleanProperty.set(!booleanProperty.getValue());
-    }
-
-    public SimpleBooleanProperty getInfoEvent() {
-        return infoEvent;
-    }
-
-    public String getInfoText() {
-        return infoText;
+    public void setCipherMapping(String keyWord) {
+        validateKeyWord(keyWord);
+        keyWord = keyWord.toUpperCase();
+        ArrayList<Character> cipherAlphArray = generateCipherAlphArray(keyWord);
+        cipherMapping = generateCipherMapping(cipherAlphArray);
     }
 
     private void validateKeyWord(String keyWord) {
@@ -45,18 +27,11 @@ public class CipherGenerator {
         if(keyWord.matches("^[a-zA-Z]+$")) {
             setInfoText("-> Keyword valid");
         } else if(keyWord.isEmpty() || keyWord == null) {
-            throw new IllegalArgumentException("Invalid Keyword: Empty or Null");
+            cipherMapping.clear();
+            throw new IllegalArgumentException("Invalid Keyword: Empty");
         } else {
+            cipherMapping.clear();
             throw new IllegalArgumentException("Invalid Keyword: Illegal characters");
-        }
-    }
-
-    private void ValidateMessage(String message) {
-        setInfoText("Validating message...");
-        if(message.isEmpty() || message == null) {
-            throw new IllegalArgumentException("Invalid Message: Empty or Null");
-        } else {
-            setInfoText("-> Message valid");
         }
     }
 
@@ -66,8 +41,8 @@ public class CipherGenerator {
         for(char character : keyWord.toCharArray()) {
             cipherAlphArray.add(character);
         }
-        for(char character : standardAlphabet) {
-            cipherAlphArray.add(character);
+        for(int i = standardAlphabetArray.length-1; i >= 0; i--) {
+            cipherAlphArray.add(standardAlphabetArray[i]);
         }
         cipherAlphArray = removeDuplicatesChars(cipherAlphArray);
         return cipherAlphArray;
@@ -87,23 +62,67 @@ public class CipherGenerator {
         setInfoText("Generating alphabet mapping...");
         HashMap<Character, Character> cipherMapping = new HashMap<>();
         for(int i = 0; i < cipherAlphArray.size(); i++) {
-            cipherMapping.put(standardAlphabet[i], cipherAlphArray.get(i));
+            cipherMapping.put(standardAlphabetArray[i], cipherAlphArray.get(i));
         }
         return cipherMapping;
-        //setInfoText("-> Generated cipher mapping: ");
-        //System.out.println(cipherMapping);
+    }
+
+    public String getCipherMappingToString() {
+        StringBuilder standardAlphabet = new StringBuilder();
+        StringBuilder cipherAlphabet = new StringBuilder();
+        for(Character character : standardAlphabetArray) {
+            standardAlphabet.append(character + " ");
+            cipherAlphabet.append(cipherMapping.getOrDefault(character, '#') + " ");
+        }
+        return standardAlphabet.toString() + "\n" + cipherAlphabet;
+    }
+
+    public String generateMessage(String messageInput) throws IllegalArgumentException {
+        ValidateMessage(messageInput);
+        String message = messageInput.toUpperCase();
+        return generateCipherMessage(message, cipherMapping);
+    }
+
+    private void ValidateMessage(String message) {
+        setInfoText("Validating message...");
+        if(message.isEmpty() || message == null) {
+            throw new IllegalArgumentException("Invalid Message: Empty");
+        } else {
+            setInfoText("-> Message valid");
+        }
     }
 
     private String generateCipherMessage(String message, HashMap<Character, Character> cipherMapping) {
         setInfoText("Generate cipher message...");
-        String cipherMessage;
         char[] messageArray = message.toCharArray();
         StringBuilder sb = new StringBuilder();
-        for(char character : messageArray) {
-            sb.append(cipherMapping.getOrDefault(character, character));
+        if(!cipherMapping.isEmpty()) {
+            for (char character : messageArray) {
+                sb.append(cipherMapping.getOrDefault(character, character));
+            }
+        } else {
+            throw new IllegalArgumentException("No valid cipher mapping available");
         }
-        cipherMessage = sb.toString();
         setInfoText("-> Cipher message generation successful");
-        return cipherMessage;
+        return sb.toString();
+    }
+
+    //Info Text
+
+    private void setInfoText(String text) {
+        this.infoText = text;
+        triggerEvent(infoEvent);
+    }
+
+    private void triggerEvent(SimpleBooleanProperty booleanProperty) {
+        booleanProperty.set(!booleanProperty.getValue());
+    }
+
+    public SimpleBooleanProperty getInfoEvent() {
+        return infoEvent;
+    }
+
+    public String getInfoText() {
+        return infoText;
     }
 }
