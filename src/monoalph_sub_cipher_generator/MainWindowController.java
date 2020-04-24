@@ -25,7 +25,6 @@ public class MainWindowController {
 
     private void setCipherMapping(String keyWord) {
         textAreaInfo.clear();
-        textAreaOutputMessage.clear();
         try {
             cipherGenerator.setCipherMapping(keyWord);
             textAreaCipherAlphabet.setText(cipherGenerator.getCipherMappingToString());
@@ -73,7 +72,6 @@ public class MainWindowController {
             textAreaOutputMessage.setText(cipherGenerator.generateMessage(inputMessage));
         } catch (IllegalArgumentException e) {
             setTextAreaInfo("-> " + e.getMessage());
-            textAreaCipherAlphabet.clear();
             textAreaOutputMessage.clear();
         }
     }
