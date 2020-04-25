@@ -16,8 +16,8 @@ public class CipherGenerator {
     }
 
     public void setCipherMapping(String keyWord) {
+        keyWord = keyWord.toUpperCase().trim();
         validateKeyWord(keyWord);
-        keyWord = keyWord.toUpperCase();
         ArrayList<Character> cipherAlphArray = generateCipherAlphArray(keyWord);
         cipherMapping = generateCipherMapping(cipherAlphArray);
     }
@@ -64,6 +64,7 @@ public class CipherGenerator {
         for(int i = 0; i < cipherAlphArray.size(); i++) {
             cipherMapping.put(standardAlphabetArray[i], cipherAlphArray.get(i));
         }
+        setInfoText("-> Generated mapping");
         return cipherMapping;
     }
 
@@ -78,8 +79,8 @@ public class CipherGenerator {
     }
 
     public String generateMessage(String messageInput) throws IllegalArgumentException {
-        ValidateMessage(messageInput);
-        String message = messageInput.toUpperCase();
+        String message = messageInput.toUpperCase().trim();
+        ValidateMessage(message);
         return generateCipherMessage(message, cipherMapping);
     }
 
@@ -103,7 +104,7 @@ public class CipherGenerator {
         } else {
             throw new IllegalArgumentException("No valid cipher mapping available");
         }
-        setInfoText("-> Cipher message generation successful");
+        setInfoText("-> Generated cipher message");
         return sb.toString();
     }
 
