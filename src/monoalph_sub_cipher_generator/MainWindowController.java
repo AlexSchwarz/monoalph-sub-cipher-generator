@@ -61,12 +61,18 @@ public class MainWindowController {
     }
 
     @FXML void displayAboutText() {
-        setTextAreaInfo("Place Holder");
+        textAreaInfo.clear();
+        setTextAreaInfo("Description:\nA monoalphabetic substitution cipher encrypts a message by generating a new alphabet" +
+                " using a personal keyword.\nLetters in the keyword are put to the front of the new alphabet," +
+                " which pushes back any remaining letters.\nUsage:\nEnter a keyword at the top of the window" +
+                " and watch the new alphabet be generated.\nOnce you are happy with your keyword you can enter a " +
+                " message to be encrypted.\nPress 'Generate' to create the cipher message");
     }
 
     @FXML
     public void generateMessage() {
         textAreaOutputMessage.clear();
+        textAreaInfo.clear();
         String inputMessage = textAreaInputMessage.getText();
         try {
             textAreaOutputMessage.setText(cipherGenerator.generateMessage(inputMessage));

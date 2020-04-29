@@ -16,7 +16,7 @@ public class CipherGenerator {
     }
 
     public void setCipherMapping(String keyWord) {
-        keyWord = keyWord.toUpperCase().trim();
+        keyWord = keyWord.toUpperCase();
         validateKeyWord(keyWord);
         ArrayList<Character> cipherAlphArray = generateCipherAlphArray(keyWord);
         cipherMapping = generateCipherMapping(cipherAlphArray);
